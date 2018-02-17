@@ -82,6 +82,11 @@ namespace TstGenetic
 
         static void ga_OnGenerationComplete(object sender, GaEventArgs e)
         {
+            if (e.Generation % 20 != 0)
+                return;
+
+            var fittest = e.Population.GetTop(1)[0];
+            Console.WriteLine(string.Format("Generation {0}, Fitness {1}, Distance {2}, Genes: {3}", e.Generation, fittest.Fitness, fittest.TotalDistance(), fittest.ToChromosomeString()));
         }
 
         private static bool Terminate(Population population, int currentGeneration, long currentEvaluation)
