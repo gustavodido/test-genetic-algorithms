@@ -13,6 +13,10 @@ namespace TstGenetic
         public const int INITIAL_POPULATION_SIZE = 1000;
         public const int CHROMOSOME_SIZE = 20;
 
+        public const int ETILISM = 1;
+        public const double CROSSOVER_PROBABILITY = 0.9;
+        public const double MUTATION_PROBABILITY = 0.05;
+
         static void Main(string[] args)
         {
             // Initialize the game table, matches and distances
@@ -41,6 +45,17 @@ namespace TstGenetic
 
                 population.Solutions.Add(chromossome);
             }
-        {
+
+            // Elite operator
+            var elite = new Elite(ETILISM);
+
+            // Crossover operator
+            var crossover = new Crossover(CROSSOVER_PROBABILITY);
+         
+            // Mutation operador
+            var mutate = new SwapMutate(MUTATION_PROBABILITY);
+
+
+        }
     }
 }
