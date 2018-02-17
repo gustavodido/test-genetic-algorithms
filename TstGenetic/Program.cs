@@ -55,7 +55,13 @@ namespace TstGenetic
             // Mutation operador
             var mutate = new SwapMutate(MUTATION_PROBABILITY);
 
+            // GA
+            var ga = new GeneticAlgorithm(population, CalculateFitness);
 
+            // Add operators
+            ga.Operators.Add(elite);
+            ga.Operators.Add(crossover);
+            ga.Operators.Add(mutate);
         }
     }
 }
