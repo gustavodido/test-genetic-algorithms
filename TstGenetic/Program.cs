@@ -81,5 +81,30 @@ namespace TstGenetic
             return 1 - solution.TotalDistance() / 100000;
         }
 
+          private static void Normalize()
+        {
+            var prevCity = City.SaoPaulo;
+            double totalDistance = 0;
+            foreach (var d in WorldCupChronogram.Days)
+            {
+                var currentDistance = double.MaxValue;
+                var localCity = City.SaoPaulo;
+                foreach (var m in d.Matches)
+                {
+                    var localDistance = Distances.GetDistance(prevCity, m.City);
+                    if (localDistance < currentDistance)
+                    {
+                        currentDistance = localDistance;
+                        localCity = m.City; 
+                    }
+                }
+
+                prevCity = localCity;
+                totalDistance += currentDistance;
+
+                Console.WriteLine(Convert.ToString(localCity) + " - " + totalDistance);
+            }
+            Console.ReadLine();
+        }
     }
 }
