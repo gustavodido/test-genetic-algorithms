@@ -91,6 +91,7 @@ namespace TstGenetic
 
         private static bool Terminate(Population population, int currentGeneration, long currentEvaluation)
         {
+            return currentGeneration > MAX_GENERATIONS;
         }
 
         private static double CalculateFitness(Chromosome solution)
