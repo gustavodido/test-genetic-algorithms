@@ -76,6 +76,8 @@ namespace TstGenetic
 
         static void ga_OnRunComplete(object sender, GaEventArgs e)
         {
+            Console.WriteLine(e.Population.GetTop(1)[0].ToRoute());
+            Console.WriteLine(e.Population.GetTop(1)[0].TotalDistanceWithRoute());
         }
 
         static void ga_OnGenerationComplete(object sender, GaEventArgs e)
