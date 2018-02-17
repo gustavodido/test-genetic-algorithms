@@ -22,7 +22,7 @@ namespace TstGenetic
             // Initialize the game table, matches and distances
             WorldCupChronogram.Initialize();
             Distances.Initialize();
-
+           
             // Population, with a chromossome length
             var population = new Population(CHROMOSOME_SIZE);
             
@@ -71,8 +71,8 @@ namespace TstGenetic
 
     
             Console.ReadLine();
+            
         }
-
 
         static void ga_OnRunComplete(object sender, GaEventArgs e)
         {
@@ -110,7 +110,7 @@ namespace TstGenetic
             return 1 - solution.TotalDistance() / 100000;
         }
 
-          private static void Normalize()
+        private static void Normalize()
         {
             var prevCity = City.SaoPaulo;
             double totalDistance = 0;
@@ -135,5 +135,6 @@ namespace TstGenetic
             }
             Console.ReadLine();
         }
+   
     }
 }
