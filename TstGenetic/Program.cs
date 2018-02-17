@@ -63,5 +63,23 @@ namespace TstGenetic
             ga.Operators.Add(crossover);
             ga.Operators.Add(mutate);
         }
+
+
+        private static double CalculateFitness(Chromosome solution)
+        {
+            // Invalidate genes with more games than the day has
+            for (int i = 0; i < solution.Genes.Count; i++)
+            {
+                var maxGamesInDays = WorldCupChronogram.Days[i].NumberOfGames;
+                var value = solution.Genes[i].RealValue;
+
+                if (value >= maxGamesInDays)
+                    return 0;
+            }
+
+            // Normalize between 0 and 1
+            return 1 - solution.TotalDistance() / 100000;
+        }
+
     }
 }
