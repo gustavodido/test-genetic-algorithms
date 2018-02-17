@@ -1,0 +1,7 @@
+C:\Users\Gustavo\Google Drive\Projects\C#\TstGenetic\TstGenetic\bin\Debug\TstGenetic.exe.config
+C:\Users\Gustavo\Google Drive\Projects\C#\TstGenetic\TstGenetic\obj\Debug\TstGenetic.csprojResolveAssemblyReference.cache
+C:\Users\Gustavo\Google Drive\Projects\C#\TstGenetic\TstGenetic\bin\Debug\TstGenetic.exe
+C:\Users\Gustavo\Google Drive\Projects\C#\TstGenetic\TstGenetic\bin\Debug\TstGenetic.pdb
+C:\Users\Gustavo\Google Drive\Projects\C#\TstGenetic\TstGenetic\bin\Debug\GAF.dll
+C:\Users\Gustavo\Google Drive\Projects\C#\TstGenetic\TstGenetic\obj\Debug\TstGenetic.exe
+C:\Users\Gustavo\Google Drive\Projects\C#\TstGenetic\TstGenetic\obj\Debug\TstGenetic.pdb
