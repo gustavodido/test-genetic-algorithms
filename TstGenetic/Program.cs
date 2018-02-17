@@ -62,8 +62,29 @@ namespace TstGenetic
             ga.Operators.Add(elite);
             ga.Operators.Add(crossover);
             ga.Operators.Add(mutate);
+
+            // Handlers
+            ga.OnGenerationComplete += ga_OnGenerationComplete;
+            ga.OnRunComplete += ga_OnRunComplete;
+
+            ga.Run(Terminate);
+
+    
+            Console.ReadLine();
         }
 
+
+        static void ga_OnRunComplete(object sender, GaEventArgs e)
+        {
+        }
+
+        static void ga_OnGenerationComplete(object sender, GaEventArgs e)
+        {
+        }
+
+        private static bool Terminate(Population population, int currentGeneration, long currentEvaluation)
+        {
+        }
 
         private static double CalculateFitness(Chromosome solution)
         {
